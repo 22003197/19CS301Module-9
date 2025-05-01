@@ -3,86 +3,40 @@
 
 ### AIM
 
-To write a python program to delete an element from a specific location in the given linked list.
+To write a python program to find the square root of all elements in a list using list comprehension.
 
 ### ALORITHM 
 
 1. Start the program.
 
-2. Create a Node class with:
-   data to store value
-   next to point to the next node
+2. Read the number of elements.
 
-3. Create a linked list class (delete_front) with:
-   head to store the start of the list
+3. Create an empty list.
 
-4. Define push(data):
-   Add new node at the front of the list
+4. Read n float values – Append each to the list l.
 
-5. Define removeNode(position):
-   If position is 0 → remove the head node
-   Else → move to the node before the position and update its next to skip the target node
+5. Compute square roots – Create a new list sq_l with the square root of each element in l.
 
-6. Print all node values from start to end
+6. Print l and sq_l – Display the original and square root lists.
 
-7. In main:
-   Take input for number of elements
-   Insert elements using push()
-   Delete node at position 3 using removeNode(3)
-   Display the final list using display()
-
-8. Terminate the program.
+7. Terminate the program.
    
 ### PROGRAM
 
 ```
-class Node:
-    def __init__(self, data):
-        self.data = data
-        self.next = None
-        
-class delete_front:
-    def __init__(self):
-        self.head = None
-  
-    def removeNode(self, position):
-        if self.head==None:
-            return
-        temp=self.head
-        if position ==0:
-            self.head=temp.next
-            temp=None
-            return
-        for i in range(position-1):
-            temp=temp.next
-        temp1=temp.next.next
-        temp.next=temp1
-        
-    def push(self, data):
-        if self.head is None:
-            self.head = Node(data)
-            return
-        temp = Node(data)
-        temp.next = self.head
-        self.head = temp
-        
-    def display(self):
-        temp1 = self.head
-        while temp1 is not None:
-            print(temp1.data , end =" ")
-            temp1 = temp1.next
-dfront = delete_front()
-val = int(input("Enter the number of elements to push:\n"))
-for i in range(val):
-    data = int(input())
-    dfront.push(data)
-dfront.removeNode(3)     
-dfront.display()
+n=int(input())
+l=[]
+for i in range(n):
+    x=float(input())
+    l.append(x)
+sq_l=[item**0.5 for item in l]
+print(l)
+print(sq_l)
 ```
 
 ### OUTPUT
 
-![image](https://github.com/user-attachments/assets/1e639ec2-0a5f-469f-aba6-ef6c9d92393a)
+![image](https://github.com/user-attachments/assets/8133ae95-dbbb-4927-9d3f-b265b2c5797d)
 
 ### RESULT
 Thus the python program was successfully created.
